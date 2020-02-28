@@ -1,5 +1,5 @@
 const express = require('express');
-const models = require('../../models'); // 模型对象
+const models = require('../../db/models'); // 模型对象
 
 const router = express.Router();
 
