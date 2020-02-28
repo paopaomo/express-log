@@ -1,10 +1,11 @@
 const winston = require('winston');
-const { getBasicLog } = require("../helper/log");
+const { getBasicLog, myFormat } = require("../helper/log");
 
 const logger = winston.createLogger({
     transports: [
         new winston.transports.Console()
-    ]
+    ],
+    format: myFormat
 });
 
 module.exports = (req, res, next) => {

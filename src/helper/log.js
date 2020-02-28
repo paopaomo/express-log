@@ -1,3 +1,5 @@
+const winston = require('winston');
+
 const getBasicLog = (req) => {
     const meta = {};
 
@@ -18,4 +20,8 @@ const getBasicLog = (req) => {
     return meta;
 };
 
-module.exports = { getBasicLog };
+const myFormat = winston.format.printf(({ message }) => {
+    return JSON.stringify(message);
+});
+
+module.exports = { getBasicLog, myFormat };
