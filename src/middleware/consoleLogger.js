@@ -15,7 +15,7 @@ const createConsoleLog = (meta) => {
             logs: [{
                 event: "info",
                 timestamp: new Date().toISOString(),
-                message
+                message: JSON.stringify(message)
             }]
         };
         logger.info(log);
@@ -27,7 +27,7 @@ const createConsoleLog = (meta) => {
             logs: [{
                 event: "warn",
                 timestamp: new Date().toISOString(),
-                message
+                message: JSON.stringify(message)
             }]
         };
         logger.warn(log);
@@ -39,7 +39,7 @@ const createConsoleLog = (meta) => {
             logs: [{
                 event: "error",
                 timestamp: new Date().toISOString(),
-                message
+                message: JSON.stringify(message)
             }]
         };
         logger.error(log);

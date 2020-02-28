@@ -14,12 +14,9 @@ module.exports = (req, res, next) => {
     meta.logs = [{
         event: 'info',
         timestamp: new Date().toISOString(),
-        message: {
-            headers: req.headers,
-            body: req.body,
-            params: req.params,
-            query: req.query
-        }
+        message: JSON.stringify({
+            headers: req.headers
+        })
     }];
 
     const end = res.end;
