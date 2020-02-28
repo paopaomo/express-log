@@ -16,7 +16,7 @@ router.get('/', function(req, res) {
     res.end();
 });
 
-router.use(userRouter);
+router.use('/user', userRouter);
 
 module.exports = router;
 
